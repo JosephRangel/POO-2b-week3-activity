@@ -8,6 +8,7 @@ def test_iniciar_sistema_imprime_mensaje(capsys: pytest.CaptureFixture[str]) -> 
     """
     # 1. Ejecutamos la función que queremos probar
     iniciar_sistema()
+    # comentario de prueba
 
     # 2. Capturamos lo que la función escribió en la terminal
     captura = capsys.readouterr()
