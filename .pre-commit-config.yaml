@@ -21,3 +21,16 @@ repos:
       - id: mypy
         # Ignora librerías externas que no tengan tipado para no bloquear a los alumnos
         args: [--ignore-missing-imports]
+
+  # 4. Pruebas Unitarias (Pytest) - Se ejecuta localmente (NO SE USA ASI EN LA INDUSTRIA)
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        types: [ python ]
+        # Esto es vital: Evita que pre-commit le pase los nombres de
+        # los archivos modificados a pytest, dejando que pytest busque
+        # la carpeta "tests/" por su cuenta.
+        pass_filenames: false

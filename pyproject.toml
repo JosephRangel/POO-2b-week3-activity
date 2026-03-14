@@ -60,3 +60,5 @@ addopts = "-ra -q"
 testpaths = [
     "tests",
 ]
+# Le dice a Pytest que el código fuente está en la carpeta actual (raíz)
+pythonpath = ["."]
